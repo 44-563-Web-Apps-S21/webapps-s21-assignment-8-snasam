@@ -19,12 +19,16 @@ const server =
 
       if (req.method === 'GET' ) {
        
-          console.log("Look for query parameter data: " + search_params.get("x","y"))
+          console.log("Look for query parameter data: " + search_params.get("data"))
+
+          x=search_params.get("x");
+          y=search_params.get("y");
+
 
           // Process the queries here
           res.statusCode = 200      //code for OK
           res.setHeader('Content-Type', 'text/plain') 
-          res.write('Exp(${x}) is $(Math.exp(x,y)}')
+          res.write(`exp(${x},${y}) is ${Math.exp(x,y)}`)
           
           res.end();
         
