@@ -19,12 +19,12 @@ const server =
 
       if (req.method === 'GET' ) {
        
-          console.log("Look for query parameter data: " + search_params.get("data"))
+          console.log("Look for query parameter data: " + search_params.get("x","y"))
 
           // Process the queries here
           res.statusCode = 200      //code for OK
           res.setHeader('Content-Type', 'text/plain') 
-          res.write('atan(${x} is ${Math.atan(x)}')
+          res.write('Exp(${x}) is $(Math.exp(x,y)}')
           
           res.end();
         
