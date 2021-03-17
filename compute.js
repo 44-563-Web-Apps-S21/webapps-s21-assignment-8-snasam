@@ -27,7 +27,7 @@ const server =
           // Process the queries here
           res.statusCode = 200      //code for OK
           res.setHeader('Content-Type', 'text/plain') 
-          res.write(`exp(${x}) is ${Math.exp(x)}`)
+          res.write(`tan(${x}) is ${Math.atan(x)}`)
           
           res.end();
         
